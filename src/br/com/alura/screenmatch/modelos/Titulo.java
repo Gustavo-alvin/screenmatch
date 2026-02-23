@@ -20,6 +20,7 @@ public class Titulo implements Comparable<Titulo> {
 
     public Titulo(TituloOmdb meuTituloOmdb) {
         this.nome = meuTituloOmdb.title();
+
         if (meuTituloOmdb.year().length() > 4) {
         throw new ErroDeConversaoDeAnoException("Não consegui converter o ano porque tem mais de 4 caracteres");
         }
@@ -85,7 +86,7 @@ public class Titulo implements Comparable<Titulo> {
 
     @Override
     public String toString() {
-        return  "{Nome = '" + nome + "', anoDeLancamento = " + anoDeLancamento + ", duracaoEmMinutos = " + duracaoEmMinutos + "}";
+        return  "{Nome = \"" + nome + "\", anoDeLancamento = " + anoDeLancamento + ", duracaoEmMinutos = " + duracaoEmMinutos + "}";
     }
 }
 
